@@ -285,6 +285,16 @@ const App = () => {
             songLink: 'https://open.spotify.com/track/1NopgVCMVhCKIm64tF7auX?si=31d981febfb74cbf',
             picture: 'https://res.cloudinary.com/dqxwpxame/image/upload/v1751777188/Screenshot_2025-07-06_124603_if5owq.png', // Placeholder image
         },
+        {
+            id: 'classmate29', // Changed ID to ensure uniqueness //done
+            name: 'Ma\'am Rea',
+            message: 'Hi Ma\'am Rea!! The best adviser I had AHHAHAHAHA. You are really dedicated to help your babies when they need something. Will forever be grateful sa support na gina give mo samin, especially me during DCT interview time HAHAHAHAHAHAH. Will forever treasure your teachings sa amin lahat! Love you ma\'am Rea, this song is for you!',
+            songTitle: 'My Heart Will Go On ',
+            songArtist: 'Celine Dion',
+            songReason: 'Big Celine Dion fan man ka maam, alam namin yan, so I picked this song for you po hehe. Miss you po Ma\'am.',
+            songLink: 'https://open.spotify.com/track/33LC84JgLvK2KuW43MfaNq?si=e3fb1b3e113d493b',
+            picture: 'https://res.cloudinary.com/dqxwpxame/image/upload/v1752220342/516097214_30635745362690609_7641417287021376425_n_gpbz73.jpg', // Placeholder image
+        },
     ];
 
     // Images for the new Gallery Page
