@@ -1,0 +1,30 @@
+# netlify.toml
+
+# Basic build settings
+[build]
+  command = "npm run build" # The command Netlify runs to build your site
+  publish = "dist"          # The directory Netlify serves after building
+
+# Headers to ensure correct MIME types for JavaScript modules
+[[headers]]
+  for = "/*.js" # Apply these headers to all .js files
+  [headers.values]
+    Content-Type = "application/javascript" # Explicitly set the correct MIME type
+
+[[headers]]
+  for = "/*.jsx" # Apply these headers to all .jsx files (though usually compiled to .js)
+  [headers.values]
+    Content-Type = "application/javascript"
+
+# Optional: If you have a specific path for your main entrypoint, you can add it.
+# For example, if your main.jsx becomes main.js in dist/assets/main.js
+# [[headers]]
+#   for = "/assets/*.js"
+#   [headers.values]
+#     Content-Type = "application/javascript"
+
+# Optional: Redirects for SPAs (ensures all paths fall back to index.html)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
