@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 
+const GROUP_PHOTO =
+  "https://res.cloudinary.com/dqxwpxame/image/upload/v1751764890/357070966_299139499195106_4093967020498687689_n_qvpzna.jpg";
+
 const LoadingScreen = ({ onDone }) => {
   const [stage, setStage] = useState("entering"); // entering | developed | fading
 
   useEffect(() => {
-    // Stage 1 — polaroid slides in and "develops"
     const t1 = setTimeout(() => setStage("developed"), 1200);
-    // Stage 2 — fade out
-    const t2 = setTimeout(() => setStage("fading"), 2200);
-    // Stage 3 — tell App we're done
-    const t3 = setTimeout(() => onDone(), 2900);
+    const t2 = setTimeout(() => setStage("fading"), 2500);
+    const t3 = setTimeout(() => onDone(), 3100);
     return () => {
       clearTimeout(t1);
       clearTimeout(t2);
@@ -29,22 +29,22 @@ const LoadingScreen = ({ onDone }) => {
         justifyContent: "center",
         zIndex: 9999,
         opacity: stage === "fading" ? 0 : 1,
-        transition: "opacity 0.7s ease",
+        transition: "opacity 1s ease",
       }}
     >
       {/* Polaroid */}
       <div
         style={{
           background: "#fff",
-          padding: "12px 12px 40px 12px",
+          padding: "14px 14px 52px 14px",
           borderRadius: "4px",
-          boxShadow: "0 20px 60px rgba(0,0,0,0.18), 0 4px 12px rgba(0,0,0,0.1)",
-          width: "180px",
+          boxShadow: "0 24px 70px rgba(0,0,0,0.2), 0 6px 16px rgba(0,0,0,0.1)",
+          width: "260px",
           transform:
             stage === "entering"
-              ? "translateY(40px) rotate(-4deg) scale(0.85)"
+              ? "translateY(50px) rotate(-4deg) scale(0.85)"
               : "translateY(0px) rotate(-2deg) scale(1)",
-          transition: "transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1)",
+          transition: "transform 1s cubic-bezier(0.34, 1.56, 0.64, 1)",
           position: "relative",
         }}
       >
@@ -53,34 +53,40 @@ const LoadingScreen = ({ onDone }) => {
           style={{
             width: "100%",
             aspectRatio: "1",
-            background:
-              stage === "entering"
-                ? "#d1d5db"
-                : "linear-gradient(135deg, #7c3aed, #3b82f6)",
+            background: "#d1d5db",
             borderRadius: "2px",
             overflow: "hidden",
             position: "relative",
-            transition: "background 0.9s ease 0.4s",
           }}
         >
-          {/* Develop wipe effect */}
+          {/* Grey base — visible while developing */}
+          <div
+            style={{ width: "100%", height: "100%", background: "#d1d5db" }}
+          />
+
+          {/* Photo wipes in from left */}
           <div
             style={{
               position: "absolute",
               inset: 0,
-              background: "linear-gradient(135deg, #7c3aed, #3b82f6)",
               clipPath:
                 stage === "entering" ? "inset(0 100% 0 0)" : "inset(0 0% 0 0)",
-              transition: "clip-path 0.9s ease 0.4s",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
+              transition: "clip-path 1.1s ease 0.4s",
             }}
           >
-            <span style={{ fontSize: "2.5rem" }}>📸</span>
+            <img
+              src={GROUP_PHOTO}
+              alt="SPJ class"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                display: "block",
+              }}
+            />
           </div>
 
-          {/* Shine overlay */}
+          {/* Shine sweep */}
           {stage === "developed" && (
             <div
               style={{
@@ -90,48 +96,50 @@ const LoadingScreen = ({ onDone }) => {
                 width: "200%",
                 height: "200%",
                 background:
-                  "linear-gradient(45deg, transparent 40%, rgba(255,255,255,0.15) 50%, transparent 60%)",
+                  "linear-gradient(45deg, transparent 40%, rgba(255,255,255,0.18) 50%, transparent 60%)",
                 animation: "shine 1s ease forwards",
+                pointerEvents: "none",
               }}
             />
           )}
         </div>
 
         {/* Polaroid caption */}
-        <div style={{ textAlign: "center", marginTop: "10px" }}>
+        <div style={{ textAlign: "center", marginTop: "12px" }}>
           <p
             style={{
               fontFamily: "'DM Sans', 'Inter', sans-serif",
-              fontSize: "0.72rem",
+              fontSize: "0.8rem",
               color: "#6b7280",
               letterSpacing: "0.05em",
               opacity: stage === "developed" ? 1 : 0,
               transition: "opacity 0.5s ease 0.9s",
+              margin: 0,
             }}
           >
             loading memories...
           </p>
         </div>
 
-        {/* Polaroid tape */}
+        {/* Tape */}
         <div
           style={{
             position: "absolute",
-            top: "-10px",
+            top: "-12px",
             left: "50%",
             transform: "translateX(-50%)",
-            width: "40px",
-            height: "18px",
-            background: "rgba(167, 139, 250, 0.4)",
+            width: "52px",
+            height: "20px",
+            background: "rgba(167, 139, 250, 0.45)",
             borderRadius: "2px",
           }}
         />
       </div>
 
-      {/* Title below */}
+      {/* Site title */}
       <div
         style={{
-          marginTop: "2rem",
+          marginTop: "2.25rem",
           textAlign: "center",
           opacity: stage === "developed" ? 1 : 0,
           transform:
@@ -143,9 +151,10 @@ const LoadingScreen = ({ onDone }) => {
           style={{
             fontFamily: "'DM Sans', 'Inter', sans-serif",
             fontWeight: 700,
-            fontSize: "1.1rem",
+            fontSize: "1.15rem",
             color: "#7c3aed",
             letterSpacing: "0.05em",
+            margin: 0,
           }}
         >
           SPJ Pips 💌
@@ -154,8 +163,8 @@ const LoadingScreen = ({ onDone }) => {
 
       <style>{`
         @keyframes shine {
-          0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
-          100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+          0%   { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+          100% { transform: translateX(100%)  translateY(100%)  rotate(45deg); }
         }
       `}</style>
     </div>
