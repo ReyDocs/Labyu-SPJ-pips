@@ -126,7 +126,7 @@ const classmates = [
     id: "classmate10",
     name: "Ayessa Jane Gamas",
     message:
-      "Hi Ayessa! I hope college treats you well. Keep being the amazing person that you are!",
+      "Hi Yess!! You\'ve been a great friend and classmate to me. You\'re what I consider, a very joyful person that can bring smiles to a group or class, in this case. I\'m positive that you are going to do great things in life especially in college. Goodluck sa college journey Gams!!! This song is for you.",
     songTitle: "A Sky Full of Stars",
     songArtist: "Coldplay",
     songReason:
@@ -246,7 +246,7 @@ const classmates = [
     songLink:
       "https://open.spotify.com/track/29eiVZ3R6iJcXB01dOAl6H?si=e53e00970d6e4309",
     picture:
-      "https://res.cloudinary.com/dqxwpxame/image/upload/v1752081488/c3dc6df7-f993-4b38-a454-1c940dbb42ac_qr38ue.jpg", 
+      "https://res.cloudinary.com/dqxwpxame/image/upload/v1752081488/c3dc6df7-f993-4b38-a454-1c940dbb42ac_qr38ue.jpg",
   },
   {
     id: "classmate19", //done
