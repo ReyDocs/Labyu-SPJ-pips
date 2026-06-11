@@ -238,13 +238,13 @@ const classmates = [
     id: "classmate18", //done
     name: "Jessica Leandra Paculio",
     message:
-      "Hey Jess! We're about to go our separate ways na. I just wanna say that even though we are not together anymore, I still want to see you grow, achieve your dreams, find happiness, pero now, as a good friend of yours. We both know that this isn't what were planning but I still want to see you succeed in life. I pray that we both find our peace. You'll always have a special place in my heart. Goodluck sa college life, Jess. This song is for you.",
-    songTitle: "Waltz of Four Left Feet",
-    songArtist: "Shirebound and Busking",
+      "Someone once told me that you'll never fully move on from someone, it just stays in the back of your mind while the world moves on, until something triggers that memory of what once was. I don't think I can truly move on but I am doing great already, and I hope you are as well. Not the future we thought we would have but I hope we can both find our own happiness. This song is for you Jess. Goodluck.",
+    songTitle: "Burnout 3D",
+    songArtist: "Johnoy Danao, Ebe Dancel, Bullet Dumas",
     songReason:
-      "Honestly, I can choose a lot of songs but instead, I chose this one. This is my own interpretation but the lyrics talks about living your own life, without this person but still wants to be a part of their life. I'm pretty sure that the song and lyrics are self-explanatory. I guess hindi ko naman ikamamatay kung hindi ko mahawakan ang iyong kamay. Goodluck sa life, this is for you.",
+      "I don't know if you'll notice this change in music but I changed it to this. The song is self explanatory. Wish of luck, Jess.",
     songLink:
-      "https://open.spotify.com/track/29eiVZ3R6iJcXB01dOAl6H?si=e53e00970d6e4309",
+      "https://www.youtube.com/watch?v=uvGN8r0AFkw&list=RDuvGN8r0AFkw&start_radio=1",
     picture:
       "https://res.cloudinary.com/dqxwpxame/image/upload/v1752081488/c3dc6df7-f993-4b38-a454-1c940dbb42ac_qr38ue.jpg",
   },
@@ -299,7 +299,7 @@ const classmates = [
     songArtist: "Cup of Joe",
     songReason:
       "The lyrics encourage embracing one's emotions and not holding back. It's better to let your frustrations out rather than bottle them up, and I hope you are doing that.",
-    songLink: "https://open.spotify.com/track/0ePfa6zS6fU11o6y1G1g9d", // ⚠️ Placeholder link — replace with correct Silakbo link
+    songLink: "https://open.spotify.com/track/0xW6HjCyIEN81xIKpmp6td", // ⚠️ Placeholder link — replace with correct Silakbo link
     picture:
       "https://res.cloudinary.com/dqxwpxame/image/upload/v1751773175/495328643_1662700758454683_8279747951604063248_n_q7dqqk.jpg",
   },
